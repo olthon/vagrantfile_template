@@ -13,13 +13,28 @@ Vagrant vagrantfileの自分用テンプレートです
 $ vagrant box add centos64_gihyo https://dl.dropboxusercontent.com/u/3657281/centos64_ja.box
 ```
 
+### 目標 ###
+* Vagrant + VirtualBox + Eclipseの開発環境
+* よくわからないのでprovisionはとりあえずshell scriptで
+* phpリモートデバッグ環境までを仮想の中に入れたい
+
+## Plugins ##
+* Sahara
+
+```bash
+$ vagrant plugin install sahara
+```
+
+
 ### 余談 ###
 vagrantのHomeには各種設定の他に、addしたboxも入るため、SSDで容量が心配なのでHomeをHDDの方へ移動させてます。
 
 * Mac
+
 ```bash
 $ echo 'export VAGRANT_HOME=[パス]' >>~/.bashrc
 ```
+
 * Win  
 環境変数 VAGRANT_HOME にパス記述
 
